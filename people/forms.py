@@ -16,8 +16,7 @@ class CreateUserProfileForm(ModelForm):
                 raise forms.ValidationError("Image file too large ( > 2mb )")
             return image
 
-
-class Meta:
+    class Meta:
         model = UserProfile
         fields = ('staff_photo', 'call_me_by', 'working_periods', 'grad_date', 'office', 'about_me', 'phone', 'alt_phone')
 
